@@ -47,3 +47,17 @@
   width: 400px;
   color: dodgerblue;
 }
+.foot{
+  margin-top: 1px;
+  height:40px;
+  border: 2px solid darkgray;
+}
+.footbutton{
+  display: inline-block;
+  margin-left: 355px;
+  margin-top: 10px;
+
+}
+.strong{
+  margin-left: 5px;
+}

@@ -10,6 +10,7 @@
 <div id="todoapp">
   <header class="header">
     <h1>备忘录</h1>
+    <br/>
     <input v-model="inputValue" @keyup.enter="add" autofocus="autofocus" autocomplete="off" placeholder="请输入"
            class="new-todo">
   </header>
@@ -19,13 +20,16 @@
         <div class="view">
           <span class="index">{{ index+1 }}.</span>
           <label class="label">{{ item }}</label>
-          <button class="destroy"><img src="删除.png" height="15" width="15"/></button>
+          <button class="destroy" @click="remove(index)"><img src="删除.png" height="15" width="15"/></button>
         </div>
       </li>
     </ul>
   </section>
   <footer class="foot">
-
+    <span v-show="list.length!=0">
+      <i class="strong" >{{ list.length }}</i> items left
+      <button class="footbutton" @click="clear">clear</button>
+    </span>
   </footer>
   <footer class="info">
 
@@ -36,11 +40,18 @@
     el: "#todoapp",
     data:{
       list:["备忘录1","备忘录2","备忘录3"],
-      inputValue:"好好学习，天天向上",
+      inputValue:"",
     },
     methods :{
       add:function () {
         this.list.push(this.inputValue);
+      },
+      remove:function (index) {
+        this.list.splice(index,1);
+      },
+      clear:function () {
+        this.list= [];
+
       }
     }
   })
