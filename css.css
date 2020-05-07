@@ -1,0 +1,49 @@
+*{
+  margin: 0px;
+  background-color: lavender;
+}
+#todoapp{
+  width: 500px;
+  height: 400px;
+  margin-top: 100px;
+  margin-left: 450px;
+}
+.header{
+  color: dimgray;
+  text-align: center;
+}
+.new-todo{
+  width: 500px;
+  margin-top: 10px;
+  height: 40px;
+  font-size: 16px;
+  display: block;
+  border: 0.5px solid darkgrey;
+}
+.main{
+  margin-top: 2px;
+  border: 1px solid darkgrey;
+}
+.todo-list{
+  list-style-type: none;
+  padding: 0px;
+}
+.todo{
+  height: 40px;
+  border-bottom: 1px solid darkgrey;
+}
+.view{
+  padding: 5px;
+  border:0.5px solid lavender;
+}
+.index{
+  text-align: center;
+  display: inline-block;
+  width:40px;
+  color: darkgrey;
+}
+.label{
+  display: inline-block;
+  width: 400px;
+  color: dodgerblue;
+}

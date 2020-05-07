@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>记事本</title>
+  <link type="text/css" href="css.css" rel="stylesheet">
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="todoapp">
+  <header class="header">
+    <h1>备忘录</h1>
+    <input v-model="inputValue" @keyup.enter="add" autofocus="autofocus" autocomplete="off" placeholder="请输入"
+           class="new-todo">
+  </header>
+  <section class="main">
+    <ul class="todo-list">
+      <li class="todo" v-for="(item,index) in list">
+        <div class="view">
+          <span class="index">{{ index+1 }}.</span>
+          <label class="label">{{ item }}</label>
+          <button class="destroy"><img src="删除.png" height="15" width="15"/></button>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <footer class="foot">
+
+  </footer>
+  <footer class="info">
+
+  </footer>
+</div>
+<script>
+  var app=new Vue({
+    el: "#todoapp",
+    data:{
+      list:["备忘录1","备忘录2","备忘录3"],
+      inputValue:"好好学习，天天向上",
+    },
+    methods :{
+      add:function () {
+        this.list.push(this.inputValue);
+      }
+    }
+  })
+</script>
+</body>
+</html>
